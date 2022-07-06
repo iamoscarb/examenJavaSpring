@@ -2,6 +2,7 @@ package ids.airport.airport.controller;
 
 import ids.airport.airport.exception.Mensaje;
 import ids.airport.airport.model.Airport;
+import ids.airport.airport.model.Client;
 import ids.airport.airport.service.Airport.AirportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -44,5 +45,10 @@ public class AirportController {
     public HttpStatus deleteAirport(@PathVariable long id){
         this.airportService.deleteAirport(id);
         return HttpStatus.OK;
+    }
+
+    @PostMapping("/add")
+    public ResponseEntity<Airport> createAirport(@RequestBody Airport airport){
+        return ResponseEntity.ok().body(this.airportService.createAirport(airport));
     }
 }

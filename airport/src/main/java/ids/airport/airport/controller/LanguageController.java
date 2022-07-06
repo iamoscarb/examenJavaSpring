@@ -44,4 +44,9 @@ public class LanguageController {
         this.languageService.deleteLanguage(id);
         return HttpStatus.OK;
     }
+
+    @PostMapping("/add")
+    public ResponseEntity<Language> createLanguage(@RequestBody Language language){
+        return ResponseEntity.ok().body(this.languageService.createLanguage(language));
+    }
 }

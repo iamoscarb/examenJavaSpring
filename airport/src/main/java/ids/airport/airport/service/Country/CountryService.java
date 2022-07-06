@@ -12,4 +12,6 @@ public interface CountryService {
     void deleteCountry(long countryId);
 
     Country updateCountry(Country country);
+
+    Country createCountry(Country country);
 }

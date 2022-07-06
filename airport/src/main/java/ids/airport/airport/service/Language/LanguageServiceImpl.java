@@ -1,8 +1,6 @@
 package ids.airport.airport.service.Language;
 
 import ids.airport.airport.exception.ResourceNotFoundException;
-import ids.airport.airport.model.Airport;
-import ids.airport.airport.model.Country;
 import ids.airport.airport.model.Language;
 import ids.airport.airport.repository.LanguageRepository;
 import org.springframework.stereotype.Service;
@@ -59,5 +57,10 @@ public class LanguageServiceImpl implements LanguageService {
         } else {
             throw new ResourceNotFoundException("Record not found with id : " + language.getId());
         }
+    }
+
+    @Override
+    public Language createLanguage(Language language) {
+        return languageRepository.save(language);
     }
 }

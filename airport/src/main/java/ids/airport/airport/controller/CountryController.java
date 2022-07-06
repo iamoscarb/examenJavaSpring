@@ -28,21 +28,26 @@ public class CountryController {
     }
 
     //petición tipo GET
-    @GetMapping("/findEmployee/{id}")
+    @GetMapping("/findCountry/{id}")
     public ResponseEntity<Country> getCountryById(@PathVariable long id) {
         return ResponseEntity.ok().body(countryService.findById(id));
     }
 
     //petición PUT
-    @PutMapping("/updateEmployee/{id}")
+    @PutMapping("/updateCountry/{id}")
     public ResponseEntity<Country> updateCountry(@PathVariable long id, @RequestBody Country country){
         country.setId(id);
         return ResponseEntity.ok().body(this.countryService.updateCountry(country));
     }
 
-    @DeleteMapping("/deleteEmployee/{id}")
+    @DeleteMapping("/deleteCountry/{id}")
     public HttpStatus deleteCountry(@PathVariable long id){
         this.countryService.deleteCountry(id);
         return HttpStatus.OK;
+    }
+
+    @PostMapping("/add")
+    public ResponseEntity<Country> createCountry(@RequestBody Country country){
+        return ResponseEntity.ok().body(this.countryService.createCountry(country));
     }
 }

@@ -59,4 +59,9 @@ public class AirportServiceImpl implements AirportService{
             throw new ResourceNotFoundException("Record not found with id : " + airport.getId());
         }
     }
+
+    @Override
+    public Airport createAirport(Airport airport) {
+        return airportRepository.save(airport);
+    }
 }

@@ -10,7 +10,7 @@ public interface EmployeeService {
 
     List<Employee> findAll();
 
-    void deleteLanguage(long employeeId);
+    void deleteEmployee(long employeeId);
 
-    Employee updateLanguage(Employee employee);
+    Employee updateEmployee(Employee employee);
 }

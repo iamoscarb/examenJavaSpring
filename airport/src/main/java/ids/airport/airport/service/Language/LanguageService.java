@@ -13,4 +13,6 @@ public interface LanguageService {
     void deleteLanguage(long languageId);
 
     Language updateLanguage(Language language);
+
+    Language createLanguage(Language language);
 }
