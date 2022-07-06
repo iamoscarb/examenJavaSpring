@@ -2,7 +2,7 @@
 Sistema de un aeropuerto, creado con Java, Python y Spring Boot, que permite al usuario crear nuevos clientes/empleados y visualizar los datos.
 
 ## Demo
-link
+https://github.com/iamoscarb/examenJavaSpring
 
 ## Instalación
 Se debe contar con los siguientes programas para su correcto funcionamiento:
